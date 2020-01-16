@@ -62,6 +62,10 @@
     </rule>
 
     <!-- Ignore for tests. -->
+    <!-- Ignore missing namespace for tests -->
+    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+        <exclude-pattern>*/tests/*\.php$</exclude-pattern>
+    </rule>
     <!-- Ignore method name prefixed with underscore to indicate visibility -->
     <rule ref="PSR2.Methods.MethodDeclaration.Underscore">
         <exclude-pattern>tests?/*(Cest|Test).php$</exclude-pattern>
